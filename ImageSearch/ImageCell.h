@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ImageCell.h
 //  ImageSearch
 //
 //  Created by Ben Lindsey on 10/25/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ImageCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

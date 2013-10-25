@@ -14,13 +14,17 @@
 		13115C0C181B204500CE2B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C0B181B204500CE2B49 /* main.m */; };
 		13115C10181B204500CE2B49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C0F181B204500CE2B49 /* AppDelegate.m */; };
 		13115C13181B204500CE2B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13115C11181B204500CE2B49 /* Main.storyboard */; };
-		13115C16181B204500CE2B49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C15181B204500CE2B49 /* ViewController.m */; };
+		13115C16181B204500CE2B49 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C15181B204500CE2B49 /* SearchViewController.m */; };
 		13115C18181B204500CE2B49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13115C17181B204500CE2B49 /* Images.xcassets */; };
 		13115C1F181B204500CE2B49 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13115C1E181B204500CE2B49 /* XCTest.framework */; };
 		13115C20181B204500CE2B49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13115BFF181B204500CE2B49 /* Foundation.framework */; };
 		13115C21181B204500CE2B49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13115C03181B204500CE2B49 /* UIKit.framework */; };
 		13115C29181B204500CE2B49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13115C27181B204500CE2B49 /* InfoPlist.strings */; };
 		13115C2B181B204500CE2B49 /* ImageSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C2A181B204500CE2B49 /* ImageSearchTests.m */; };
+		13115C37181B216A00CE2B49 /* GoogleClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C36181B216A00CE2B49 /* GoogleClient.m */; };
+		13115C3A181B23E300CE2B49 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C39181B23E300CE2B49 /* Image.m */; };
+		13115C3D181B2A7C00CE2B49 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C3C181B2A7C00CE2B49 /* ImageCell.m */; };
+		F6C985F575CF48F18A6B88ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2E1E620C9C4F52B21C16FB /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +49,22 @@
 		13115C0E181B204500CE2B49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13115C0F181B204500CE2B49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		13115C12181B204500CE2B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		13115C14181B204500CE2B49 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		13115C15181B204500CE2B49 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		13115C14181B204500CE2B49 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		13115C15181B204500CE2B49 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		13115C17181B204500CE2B49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		13115C1D181B204500CE2B49 /* ImageSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13115C1E181B204500CE2B49 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		13115C26181B204500CE2B49 /* ImageSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageSearchTests-Info.plist"; sourceTree = "<group>"; };
 		13115C28181B204500CE2B49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13115C2A181B204500CE2B49 /* ImageSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageSearchTests.m; sourceTree = "<group>"; };
+		13115C35181B216A00CE2B49 /* GoogleClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleClient.h; sourceTree = "<group>"; };
+		13115C36181B216A00CE2B49 /* GoogleClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleClient.m; sourceTree = "<group>"; };
+		13115C38181B23E300CE2B49 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		13115C39181B23E300CE2B49 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		13115C3B181B2A7C00CE2B49 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		13115C3C181B2A7C00CE2B49 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		B83110CA9C8E401EB71CBE76 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BF2E1E620C9C4F52B21C16FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 				13115C02181B204500CE2B49 /* CoreGraphics.framework in Frameworks */,
 				13115C04181B204500CE2B49 /* UIKit.framework in Frameworks */,
 				13115C00181B204500CE2B49 /* Foundation.framework in Frameworks */,
+				F6C985F575CF48F18A6B88ED /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +99,7 @@
 				13115C24181B204500CE2B49 /* ImageSearchTests */,
 				13115BFE181B204500CE2B49 /* Frameworks */,
 				13115BFD181B204500CE2B49 /* Products */,
+				B83110CA9C8E401EB71CBE76 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +119,7 @@
 				13115C01181B204500CE2B49 /* CoreGraphics.framework */,
 				13115C03181B204500CE2B49 /* UIKit.framework */,
 				13115C1E181B204500CE2B49 /* XCTest.framework */,
+				BF2E1E620C9C4F52B21C16FB /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,8 +130,14 @@
 				13115C0E181B204500CE2B49 /* AppDelegate.h */,
 				13115C0F181B204500CE2B49 /* AppDelegate.m */,
 				13115C11181B204500CE2B49 /* Main.storyboard */,
-				13115C14181B204500CE2B49 /* ViewController.h */,
-				13115C15181B204500CE2B49 /* ViewController.m */,
+				13115C14181B204500CE2B49 /* SearchViewController.h */,
+				13115C15181B204500CE2B49 /* SearchViewController.m */,
+				13115C35181B216A00CE2B49 /* GoogleClient.h */,
+				13115C36181B216A00CE2B49 /* GoogleClient.m */,
+				13115C38181B23E300CE2B49 /* Image.h */,
+				13115C39181B23E300CE2B49 /* Image.m */,
+				13115C3B181B2A7C00CE2B49 /* ImageCell.h */,
+				13115C3C181B2A7C00CE2B49 /* ImageCell.m */,
 				13115C17181B204500CE2B49 /* Images.xcassets */,
 				13115C06181B204500CE2B49 /* Supporting Files */,
 			);
@@ -159,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13115C2E181B204500CE2B49 /* Build configuration list for PBXNativeTarget "ImageSearch" */;
 			buildPhases = (
+				E97653ADCC024DDA88C7531E /* Check Pods Manifest.lock */,
 				13115BF8181B204500CE2B49 /* Sources */,
 				13115BF9181B204500CE2B49 /* Frameworks */,
 				13115BFA181B204500CE2B49 /* Resources */,
+				70E7D70B8A58473DA28132EB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,14 +267,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70E7D70B8A58473DA28132EB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E97653ADCC024DDA88C7531E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13115BF8181B204500CE2B49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13115C16181B204500CE2B49 /* ViewController.m in Sources */,
+				13115C37181B216A00CE2B49 /* GoogleClient.m in Sources */,
+				13115C3D181B2A7C00CE2B49 /* ImageCell.m in Sources */,
+				13115C16181B204500CE2B49 /* SearchViewController.m in Sources */,
 				13115C10181B204500CE2B49 /* AppDelegate.m in Sources */,
 				13115C0C181B204500CE2B49 /* main.m in Sources */,
+				13115C3A181B23E300CE2B49 /* Image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -367,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -375,6 +434,7 @@
 		};
 		13115C2F181B204500CE2B49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83110CA9C8E401EB71CBE76 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -388,6 +448,7 @@
 		};
 		13115C30181B204500CE2B49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83110CA9C8E401EB71CBE76 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -460,6 +521,7 @@
 				13115C30181B204500CE2B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13115C31181B204500CE2B49 /* Build configuration list for PBXNativeTarget "ImageSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +530,7 @@
 				13115C33181B204500CE2B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
