@@ -17,6 +17,7 @@
 @property (strong, nonatomic, readonly) NSString *thumbUrl;
 
 @property (strong, nonatomic, readonly) NSString *url;
+@property (strong, nonatomic, readonly) NSString *originalContextUrl;
 
 + (NSArray *)imagesFromArray:(NSArray *)array;
 

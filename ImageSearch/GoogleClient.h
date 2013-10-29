@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
 
 @interface GoogleClient : NSObject
 
-+ (void)imagesWithSearchTerm:(NSString *)searchTerm callback:(void (^)(NSError *error, NSHTTPURLResponse *response, NSArray *results))callback;
+// API only returns 8 at a time
++ (void)imagesWithSearchTerm:(NSString *)searchTerm start:(NSUInteger)start callback:(void (^)(NSError *error, NSHTTPURLResponse *response, NSArray *results))callback;
 
 @end

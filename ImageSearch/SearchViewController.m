@@ -10,26 +10,37 @@
 #import "GoogleClient.h"
 #import "Image.h"
 #import "ImageCell.h"
-#import "UIImageView+AFNetworking.h"
 
 @interface SearchViewController ()
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) NSArray *images; // of Image
+@property (strong, nonatomic) NSMutableArray *images; // of Image
+
+- (void)fetchImages:(NSUInteger)start;
 
 @end
 
 @implementation SearchViewController
 
+- (NSMutableArray *)images
+{
+    if (!_images) {
+        _images = [[NSMutableArray alloc] init];
+    }
+    return _images;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.searchBar.delegate = self;
-    self.searchDisplayController
     self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
+    
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+    layout.minimumLineSpacing = 0;
+    layout.minimumInteritemSpacing = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,18 +64,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCell" forIndexPath:indexPath];
-    Image *image = self.images[indexPath.row];
-    NSURL *url = [NSURL URLWithString:image.url];
-    [cell.imageView setImageWithURL:url];
+    cell.image = (Image *)self.images[indexPath.row];
     return cell;
-}
-
-#pragma mark - Collection view delegate
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    Image *image = self.images[indexPath.row];
-    return CGSizeMake(image.thumbWidth, image.thumbHeight);
 }
 
 #pragma mark - Search bar delegate
@@ -73,14 +74,9 @@
 {
     [searchBar endEditing:YES];
     [searchBar setShowsCancelButton:NO animated:YES];
-    [GoogleClient imagesWithSearchTerm:searchBar.text callback:^(NSError *error, NSHTTPURLResponse *response, NSArray *results) {
-        if (error) {
-            NSLog(@"%@", error);
-        } else {
-            self.images = results;
-            [self.collectionView reloadData];
-        }
-    }];
+    [self.images removeAllObjects];
+    [self.collectionView reloadData];
+    [self fetchImages:0];
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
@@ -104,5 +100,20 @@
 
 #pragma mark - Private methods
 
+- (void)fetchImages:(NSUInteger)start
+{
+    if (start == 40) {
+        [self.collectionView reloadData];
+    } else {
+        [GoogleClient imagesWithSearchTerm:self.searchBar.text start:start callback:^(NSError *error, NSHTTPURLResponse *response, NSArray *results) {
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                [self.images addObjectsFromArray:results];
+                [self fetchImages:start + 8];
+            }
+        }];
+    }
+}
 
 @end

@@ -7,25 +7,47 @@
 //
 
 #import "ImageCell.h"
+#import "AFImageRequestOperation.h"
+
+@interface ImageCell ()
+
+@property (weak, nonatomic) IBOutlet UIButton *imageButton;
+
+- (IBAction)onImageButton;
+
+@end
 
 @implementation ImageCell
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
+        // Custom initialization
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)setImage:(Image *)image
 {
-    // Drawing code
+    _image = image;
+    UIImage *spinner = [UIImage imageNamed:@"spinner.gif"];
+    [self.imageButton setImage:spinner forState:UIControlStateNormal];
+    
+    void (^block)(NSURLRequest *, NSHTTPURLResponse *, UIImage *) = ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        [self.imageButton setImage:image forState:UIControlStateNormal];
+    };
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:image.thumbUrl]];
+    AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest: urlRequest
+                                                                              imageProcessingBlock: nil
+                                                                                           success: block
+                                                                                           failure: nil];
+    [operation start];
 }
-*/
 
+- (IBAction)onImageButton
+{
+    NSURL *url = [NSURL URLWithString:self.image.originalContextUrl];
+    [[UIApplication sharedApplication] openURL:url];
+}
 @end

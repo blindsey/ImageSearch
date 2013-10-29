@@ -18,6 +18,7 @@
         _thumbHeight = [[data objectForKey:@"tbHeight"] integerValue];
         _thumbWidth = [[data objectForKey:@"tbWidth"] integerValue];
         _url = [data objectForKey:@"url"];
+        _originalContextUrl = [data objectForKey:@"originalContextUrl"];
     }
     return self;
 }

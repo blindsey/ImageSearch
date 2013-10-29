@@ -24,6 +24,7 @@
 		13115C37181B216A00CE2B49 /* GoogleClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C36181B216A00CE2B49 /* GoogleClient.m */; };
 		13115C3A181B23E300CE2B49 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C39181B23E300CE2B49 /* Image.m */; };
 		13115C3D181B2A7C00CE2B49 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115C3C181B2A7C00CE2B49 /* ImageCell.m */; };
+		13115C3F181FAD6600CE2B49 /* spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = 13115C3E181FAD6600CE2B49 /* spinner.gif */; };
 		F6C985F575CF48F18A6B88ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2E1E620C9C4F52B21C16FB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		13115C39181B23E300CE2B49 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		13115C3B181B2A7C00CE2B49 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		13115C3C181B2A7C00CE2B49 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		13115C3E181FAD6600CE2B49 /* spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spinner.gif; sourceTree = "<group>"; };
 		B83110CA9C8E401EB71CBE76 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BF2E1E620C9C4F52B21C16FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 		13115C06181B204500CE2B49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				13115C3E181FAD6600CE2B49 /* spinner.gif */,
 				13115C07181B204500CE2B49 /* ImageSearch-Info.plist */,
 				13115C08181B204500CE2B49 /* InfoPlist.strings */,
 				13115C0B181B204500CE2B49 /* main.m */,
@@ -253,6 +256,7 @@
 			files = (
 				13115C18181B204500CE2B49 /* Images.xcassets in Resources */,
 				13115C0A181B204500CE2B49 /* InfoPlist.strings in Resources */,
+				13115C3F181FAD6600CE2B49 /* spinner.gif in Resources */,
 				13115C13181B204500CE2B49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
